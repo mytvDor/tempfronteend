@@ -14,7 +14,7 @@ const App = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await fetch("http://localhost:2000/todo");
+      const response = await fetch("https://tempback.onrender.com/todo");
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -29,7 +29,7 @@ const App = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:2000/todo", {
+      const response = await fetch("https://tempback.onrender.com/todo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const App = () => {
 
   const deleteTodo = async (id) => {
     try {
-      const response = await fetch("http://localhost:2000/todos", {
+      const response = await fetch("https://tempback.onrender.com/todos", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
